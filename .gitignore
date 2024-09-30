@@ -1,0 +1,30 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+
+# Build and dependency directories
+dist/
+build/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# IDE/Editor specific
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Flask specific
+instance/
+*.sqlite3

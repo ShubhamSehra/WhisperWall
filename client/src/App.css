@@ -1,0 +1,320 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.mainTitle{
+  font-size: 4rem;
+  font-weight: 300;
+  line-height: 2.0;
+}
+.subTitle{
+  /* font-size: 4.5rem; */
+  font-weight: 300;
+  /* line-height: 2.0; */
+}
+
+/* Fill button styling */
+.fill {
+  text-decoration: none;
+  color: #292929;
+  font-size: 1rem;
+  font-weight: 500;
+  /* letter-spacing: 1px; */
+  padding: 15px 45px;
+  background-color: white;
+  /* outline: 0; */
+  border-radius: 10px;
+  border: 1px solid rgb(255, 255, 255);
+  cursor: pointer;
+ margin-right: 1rem;
+
+}
+
+.fill:hover {
+
+  background-color: rgb(0, 0, 0);
+  color:whitesmoke;
+  transition: 0.2s;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* jsx css */ 
+
+/* *{
+  margin: 0px;
+} */
+
+.regipage {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: calc(20px + 2vmin);
+  /* font-size: 2rem; */
+  font-weight: 500;
+
+  color: white;
+}
+
+.regipage input {
+  margin: 0.3rem;
+  padding: 0.5rem;
+  width: 50%;
+  height: 2.5rem;
+  background-color: #282c34;
+  border: 0px 5px;
+  border-color: red;
+  color: whitesmoke;
+  font-size: 1.4rem;
+  border-style: none none solid none;
+}
+
+.submit {
+  background-color: #282c34;
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: calc(20px + 2vmin);
+  /* font-size: 2rem; */
+  font-weight: 500;
+
+  color: white;
+}
+
+.submit form {
+  width: 100%;
+}
+
+.submit input {
+  margin: 0.3rem;
+  padding: 0.5rem;
+  width: 50%;
+  height: 2.5rem;
+  background-color: #282c34;
+  border: 0px 5px;
+  border-color: red;
+  color: whitesmoke;
+  font-size: 1.4rem;
+  border-style: none none solid none;
+}
+
+.regipage form {
+  width: 100%;
+}
+
+.secretPage {
+  background-color: #282c34;
+
+  /* display: flex; */
+  flex-direction: column;
+  /* align-items: center; */
+  text-align: center;
+  /* justify-content: center; */
+  font-size: calc(20px + 2vmin);
+  /* font-size: 2rem; */
+
+  color: white;
+}
+
+.title1 {
+  margin-top: 0.5rem;
+  font-size: 3rem;
+  /* font-weight: 300; */
+
+}
+
+.subtitle {
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+  font-size: 3rem;
+  font-weight: 300;
+
+}
+
+.infoline {
+  font-size: 1.7rem;
+  opacity: 0.5;
+}
+
+/***** CARD ************/
+
+.card-container {
+  background-color: #282c34;
+  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+  display: inline-block;
+  height: 230px;
+  width: 250px;
+  margin: 10px;
+  position: relative;
+}
+
+
+
+.card-container div {
+
+  /* height: 200px; */
+  /* width: 200px; */
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.card-container div p {
+  color: #ffffff;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+  letter-spacing: 1.2px;
+}
+
+.footer {
+  text-align: center;
+  background-color: #282c34;
+  color: whitesmoke;
+  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  background-size: 10px 10px;
+
+}
+
+
+.footer p {
+  margin: 15px 0px 0px 0px;
+  font-size: 1.3rem;
+}
+
+/****** secrets buttons **/
+
+.special-btn {
+  width: 50%;
+  background-color: rgb(34, 34, 34);
+  border: 0.1px solid rgb(0, 0, 0);
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  font-size: 2rem;
+}
+
+.special-btn:active {
+  background-color: rgb(53, 53, 53);
+}
+
+
+.trash button {
+  background-color: transparent;
+  border: 0px;
+  color: rgb(55, 55, 55);
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  font-size: 1.8rem;
+
+}
+
+.already{
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.already strong{
+  text-decoration: underline;
+  color: whitesmoke;
+}
+
+.trash button:hover {
+  font-size: 2rem;
+  color: rgb(195, 36, 36);
+}
+
+.errorlogin{
+  color: rgb(235, 96, 96);
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+
+.nav{
+  background-color: #282c34;
+  border-bottom: 1px solid black;
+  filter: drop-shadow(0px 0px 17px #292929);
+  padding: 1rem;
+}
+.nav span{
+  margin: 1rem;
+  font-size: 2rem;
+  color: whitesmoke;
+  font-family: 'Lucida Sans Unicode' ,'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', Verdana, sans-serif;
+}
+.posi{
+  font-family: 'Lucida Sans Unicode' ,'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', Verdana, sans-serif;
+  float: right;
+  font-size: 17px;
+  font-weight: 200;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10%;
+  cursor: pointer;
+ margin-right: 1.2rem;
+}
+
+.posi:hover {
+
+  background-color: rgb(0, 0, 0);
+  color:whitesmoke;
+  transition: 0.2s;
+}
+
+.footerStyle {
+  background-color: #1e1f21;
+  font-size: 1.2rem;
+  text-align: left;
+  
+}
+.linksStyle {
+  display: flex;
+
+  justify-content: center;
+
+  margin: 0.2rem;
+  gap: 2rem;
+}
+.linksStyle a {
+  color: #ffffff;
+  text-decoration: none;
+}
