@@ -13,7 +13,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000
 
-app.use(cors({origin : 'https://whisperwall.netlify.app'}));
+app.use(cors({origin : 'https://whisperwall.netlify.app', credentials: true}));
 app.options('*', cors());
 
 app.use(express.json()); 

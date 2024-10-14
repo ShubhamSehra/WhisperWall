@@ -4,6 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function SignUp() {
+  console.log(process.env.REACT_APP_API_URL);
+
   const [info, setInfo] = useState({});
   
   const navigate = useNavigate();

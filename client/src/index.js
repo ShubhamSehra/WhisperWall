@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import axios from "axios";
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
@@ -13,7 +14,7 @@ import Login from './pages/LogIn';
 import Dashboard from './pages/Dashboard';
 import PrivateRoute from './components/PrivateRoute';
 
-
+axios.defaults.withCredentials = true;
 
 const router = createBrowserRouter([
   {
