@@ -14,6 +14,8 @@ const app = express();
 const PORT = process.env.PORT || 5000
 
 app.use(cors({origin : 'https://whisperwall.netlify.app'}));
+app.options('*', cors());
+
 app.use(express.json()); 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
