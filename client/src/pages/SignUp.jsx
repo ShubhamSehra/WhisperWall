@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import Input from "../components/Input";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import dotenv, { config } from "dotenv";
-
-dotenv.config();
 
 function SignUp() {
   const [info, setInfo] = useState({});
