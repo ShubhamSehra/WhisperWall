@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 const Login = () => {
     const [user, setUser] = useState({});
-    const [error, setError] = useState('');
+   
     const navigate = useNavigate();
 
     useEffect(()=>{
@@ -24,7 +24,7 @@ const Login = () => {
     }
     const handleSubmit = async(e) =>{
       e.preventDefault();
-      setError('');
+      
       if (user.password.length < 6) {
         alert("Password must be at least 6 characters");
         return;

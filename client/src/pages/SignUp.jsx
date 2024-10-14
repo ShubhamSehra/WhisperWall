@@ -5,7 +5,7 @@ import axios from "axios";
 
 function SignUp() {
   const [info, setInfo] = useState({});
-  const [error, setError] = useState({});
+  
   const navigate = useNavigate();
 
 
@@ -30,7 +30,7 @@ function SignUp() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError("");
+  
 
     if (info.password.length < 6) {
       alert("Password must be at least 6 characters");

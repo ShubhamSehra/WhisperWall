@@ -2,11 +2,10 @@ import React from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faTrash} from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 function Card2(props) {
     const {userId} = useParams();
-    const navigate = useNavigate();
     const trashClicked = async() =>{
         try {
             await axios.post(`${process.env.API_URL}/api/deleteSecret`,{    
