@@ -1,10 +1,10 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
 const Navbar = (props) =>{
-
+    const navigate = useNavigate();
     const logout = () => {
         localStorage.clear();
-        window.open("/auth/logout", "_self")
+        navigate('/login')
 
     }
     

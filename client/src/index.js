@@ -11,6 +11,7 @@ import ErrorPage from './pages/ErrorPage';
 import SignUp from './pages/SignUp';
 import Login from './pages/LogIn';
 import Dashboard from './pages/Dashboard';
+import PrivateRoute from './components/PrivateRoute';
 
 
 
@@ -32,7 +33,11 @@ const router = createBrowserRouter([
   },
   {
     path: '/dashboard/:userId',
-    element: <Dashboard />
+    element: (
+      <PrivateRoute>
+      <Dashboard />
+    </PrivateRoute>
+  )
   }
 
 ])

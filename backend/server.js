@@ -5,7 +5,7 @@ const dotenv = require('dotenv');
 const authRoutes = require('./routes/authRoutes');
 const loginRoutes = require('./routes/loginRoutes');
 const getDataRoutes = require('./routes/getDataRoutes');
-const postsecret = require('./routes/postSecret');
+const postsecret = require('./routes/postSecret')
 const authMiddleware = require('./routes/authMiddleware');
 const bodyParser = require('body-parser');
 dotenv.config();

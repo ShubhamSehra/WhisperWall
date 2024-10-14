@@ -20,12 +20,12 @@ router.post(
     try {
       let user = await User.findOne({ email });
       if (!user) {
-        return res.status(400).json({ msg: "Invalid user" });
+        return res.status(404).json({ msg: "User does not exist" });
     }
     
     const isMatch = await bcrypt.compare(password, user.password);
     if(!isMatch){
-        return res.status(400).json({ msg: "Invalid user" });
+        return res.status(401).json({ msg: "Incorrect passowrd" });
         
       }
 
@@ -39,7 +39,7 @@ router.post(
       jwt.sign(
         payload,
         process.env.JWT_SECRET,
-        { expiresIn: 36000 },
+        { expiresIn: '1h' },
         (err, token) => {
           if (err) throw err;
           res.json({ token, user: {_id: user.id} });
@@ -47,6 +47,7 @@ router.post(
       );
     } catch (error) {
       console.log(error);
+      res.status(500).send("Server error")
     }
   }
 );

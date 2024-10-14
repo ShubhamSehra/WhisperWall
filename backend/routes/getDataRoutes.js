@@ -14,9 +14,9 @@ router.get('/userdata', async(req,res)=>{
     }
 })
 router.get('/getDetails', async(req,res)=>{
-    const {userId} = req.body; 
+    const {userId} = req.query; 
     try {
-        const users = await User.findOne({id: userId});
+        const users = await User.findById(userId);
         res.json(users)
        
         

@@ -2,19 +2,33 @@ import React, { useState } from "react";
 import Input from "../components/Input";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios"
+import { useEffect } from "react";
 
 const Login = () => {
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
     const navigate = useNavigate();
 
+    useEffect(()=>{
+      const token = localStorage.getItem('token');
+      console.log(token);
+      
+      if(token){
+        navigate(`/dashboard/${localStorage.getItem('id')}`);
+      }
+    }, [navigate])
+
     const handleChange = (e) =>{
         const {name, value} = e.target;
         setUser({...user,[name]:value});
     }
     const handleSubmit = async(e) =>{
-        e.preventDefault();
-        setError('');
+      e.preventDefault();
+      setError('');
+      if (user.password.length < 6) {
+        alert("Password must be at least 6 characters");
+        return;
+      }
         try {
           const response = await axios.post('http://localhost:5000/api/login',user);
           localStorage.setItem('token', response.data.token);
@@ -22,9 +36,21 @@ const Login = () => {
           console.log(response);
           
           const id = response.data.user._id;
+          console.log("user ID:", id);
+          
           navigate(`/dashboard/${id}`);
         } catch (error) {
-          setError('Invalid credentials')
+          if (error.response) {
+            if (error.response.status === 401) {
+              alert("Incorrect password");
+            } else if (error.response.status === 404) {
+              alert("User does not exist");
+            } else {
+              alert("An error occurred");
+            }
+          } else {
+            alert("Network error");
+          }
         }
     }
     return(

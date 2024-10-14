@@ -7,10 +7,13 @@ function SignUp() {
   const [info, setInfo] = useState({});
   const [error, setError] = useState({});
   const navigate = useNavigate();
+
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setInfo({ ...info, [name]: value });
   };
+
 
   const checkEmailExists = async (email) => {
     try {
@@ -29,10 +32,15 @@ function SignUp() {
     e.preventDefault();
     setError("");
 
+    if (info.password.length < 6) {
+      alert("Password must be at least 6 characters");
+      return;
+    }
+
     const emailExists = await checkEmailExists(info.email);
 
     if (emailExists) {
-      alert("email already exists");
+      alert("User already exists, Please login");
       return;
     }
 
