@@ -10,7 +10,7 @@ router.post(
     //Validate and samitize inputs
     check("name", "Name is required").not().isEmpty(),
     check("email", "Please provide a valid email").isEmail(),
-    check("password", "Password must be 6 or more characters").isLength({min: 2,}),
+    check("password", "Password must be 6 or more characters").isLength({min: 6,}),
   ],
   async (req, res) => {
     const errors = validationResult(req);
