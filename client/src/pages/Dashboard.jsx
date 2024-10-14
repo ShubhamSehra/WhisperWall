@@ -28,7 +28,7 @@ function Dashboard() {
     
   }, [userId, navigate]);
 
-  console.log('Login User:', loginUser);
+  console.log('Login User:', loginUser, loginUser.name, loginUser.Object.name);
 
   return (
     <div>
@@ -37,7 +37,7 @@ function Dashboard() {
         <span className="title1">
           welcome{" "}
           <p className="subtitle">
-            to the  of secrets
+            to the wall of secrets
           </p>
           <p className="infoline">within 120 words</p>
         </span>
