@@ -8,7 +8,7 @@ const AllSecrets = () =>{
     useEffect(()=>{
         const getData = async() =>{
             try {
-                const response = await axios.get("http://localhost:5000/api/userdata")
+                const response = await axios.get(`${process.env.API_URL}/api/userdata`)
                 setAllUserData(response.data);
                 // console.log(response.data);
                 

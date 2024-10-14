@@ -18,7 +18,7 @@ function SignUp() {
   const checkEmailExists = async (email) => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/check-email",
+        `${process.env.API_URL}/api/check-email`,
         { email }
       );
       return response.data.exists;
@@ -46,7 +46,7 @@ function SignUp() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/signup",
+        `${process.env.API_URL}/api/signup`,
         info
       );
       console.log("User signed up:", response.data);

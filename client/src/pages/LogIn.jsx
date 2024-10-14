@@ -30,7 +30,7 @@ const Login = () => {
         return;
       }
         try {
-          const response = await axios.post('http://localhost:5000/api/login',user);
+          const response = await axios.post(`${process.env.API_URL}/api/login`,user);
           localStorage.setItem('token', response.data.token);
           localStorage.setItem('id', response.data.user._id);
           console.log(response);
@@ -82,12 +82,10 @@ const Login = () => {
               <strong className="already-sub">Register</strong>
             </Link>{" "}
           </div>
-          {/*{auth ? <h4 className="errorlogin"> user does not exist ❌ </h4> : null}*/}
+          
         </form>
   
-        {/* <button type="submit" className="fill" onClick={google}>
-          google
-        </button> */}
+        
       </div>
     )
 }

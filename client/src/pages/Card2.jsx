@@ -9,7 +9,7 @@ function Card2(props) {
     const navigate = useNavigate();
     const trashClicked = async() =>{
         try {
-            await axios.post('http://localhost:5000/api/deleteSecret',{
+            await axios.post(`${process.env.API_URL}/api/deleteSecret`,{    
                 secret: props.secret,
                 id: userId,
             });
