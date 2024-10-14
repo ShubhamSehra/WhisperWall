@@ -28,7 +28,7 @@ function Dashboard() {
     
   }, [userId, navigate]);
 
-  console.log('Login User:', loginUser, loginUser.name, loginUser.Object.name);
+  console.log('Login User:', loginUser);
 
   return (
     <div>
