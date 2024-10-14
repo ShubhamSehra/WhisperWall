@@ -16,7 +16,7 @@ function PostSecret() {
    
    const handleSubmit = (e) =>{
     e.preventDefault();
-    axios.post(`${process.env.API_URL}/api/postsecret`,{
+    axios.post(`${process.env.REACT_APP_API_URL}/api/postsecret`,{
         secret: userSecret.secret,
         id: userId,
     }).then(()=>{

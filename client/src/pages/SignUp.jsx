@@ -21,7 +21,7 @@ function SignUp() {
   const checkEmailExists = async (email) => {
     try {
       const response = await axios.post(
-        `${process.env.API_URL}/api/check-email`,
+        `${process.env.REACT_APP_API_URL}/api/check-email`,
         { email }
       );
       return response.data.exists;
@@ -50,7 +50,7 @@ function SignUp() {
 
     try {
       const response = await axios.post(
-        `${process.env.API_URL}/api/signup`,
+        `${process.env.REACT_APP_API_URL}/api/signup`,
         info
       );
       console.log("User signed up:", response.data);

@@ -8,7 +8,7 @@ function Card2(props) {
     const {userId} = useParams();
     const trashClicked = async() =>{
         try {
-            await axios.post(`${process.env.API_URL}/api/deleteSecret`,{    
+            await axios.post(`${process.env.REACT_APP_API_URL}/api/deleteSecret`,{    
                 secret: props.secret,
                 id: userId,
             });
