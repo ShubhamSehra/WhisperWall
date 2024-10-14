@@ -20,7 +20,7 @@ function PostSecret() {
         secret: userSecret.secret,
         id: userId,
     }).then(()=>{
-        navigate('/');
+        navigate('/login');
     })
    }
   return (
