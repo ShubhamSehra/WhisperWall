@@ -17,7 +17,7 @@ function Dashboard() {
     
       const fetchUser = async () => {
         try {
-          const response = await axios.get(`${process.env.REACT_APP_API_URLL}/api/getDetails`, { params: { userId } });
+          const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/getDetails`, { params: { userId } });
           console.log('Fetched User: ', response.data);
           setLoginUser(response.data);
         } catch (error) {
